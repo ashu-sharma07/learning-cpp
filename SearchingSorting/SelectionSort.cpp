@@ -17,6 +17,7 @@ void SelectionSort(int arr[], int size){
 }
 
 int main(){
+	cout << "Selection Sort"<< endl;
 	int arr[1000];
 	int size;
 	cin >> size;
