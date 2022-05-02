@@ -1,30 +1,30 @@
 #include <iostream>
 using namespace std;
 
-void selection_sort(int arr[], int size){
-	int min_index;
+void SelectionSort(int arr[], int size){
+	int min_index, temp;
 	for (int i = 0; i<size-1; i++){
 		min_index = i;
-		for (int j = i+1; j<size; j++){
+		for (int j=i+1; j<size; j++){
 			if (arr[j]<arr[min_index]){
-			   min_index = j;	
+				min_index = j;
 			}
 		}
-		int temp = arr[i];
+		temp = arr[i];
 		arr[i] = arr[min_index];
 		arr[min_index] = temp;
 	}
 }
 
 int main(){
+	int arr[1000];
 	int size;
-	int arr[10000];
 	cin >> size;
-	for (int i = 0; i<size; i++){
+	for (int i=0; i<size; i++){
 		cin >> arr[i];
 	}
-	selection_sort(arr, size);
-	for (int i=0; i<size; i++){
+	SelectionSort(arr, size);
+	for (int i = 0; i<size; i++){
 		cout << arr[i] << ' ';
 	}
 	cout << endl;
